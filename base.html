@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<meta name="description" content="apartment complex built by citus">
+  	<meta name="keywords" content="citus, butai, pilaite">
+	<title>Gyvenimas slenyje</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<script> 
+		function validation(){
+
+			var email = document.forms["RegForm"]["EMail"];
+			var phone = document.forms["RegForm"]["Phone"];
+			var app =  document.forms["RegForm"]["appointment_time"];  
+			if (email.value == "" || email.value.indexOf("@", 0) < 0||email.value.indexOf(".", 0) < 0 )								 
+			{ 
+				window.alert("Please enter a valid e-mail address."); 
+				email.focus(); 
+				return false; 
+			} 
+			if (phone.value == "")                           
+		    { 
+		        window.alert("Please enter your telephone number."); 
+		        phone.focus(); 
+		        return false; 
+		    } 
+		    if (app.value == "" || app.value.indexOf(" ", 0) < 0)								 
+			{ 
+				window.alert("Please enter a valid e-mail address.");
+				app.focus(); 
+				return false; 
+			} 
+
+		return true; }
+	</script> 
+
+</head>
+<body>
+	<header>
+		<div class="header_elements">
+			<a class="logo">LOGO</a>
+			<div class="header-choice">
+				<a href="#">Kotedzai</a>
+				<a href="#" class="active">Gyvenimas slėnyje</a>
+				<a href="#">Galerija</a>
+				<a href="#">Gyventojams</a>
+				<a href="#">Naujienos</a>
+				<a href="#">Kontaktai</a>
+			</div>
+		</div>
+	</header>
+
+		<section class="section background">
+
+			<h2 class="page_name">Gyvenimas <span class="bold">slėnyje</span></h2>
+
+			<div class="slide_button">
+			  <a class="prev">&#10094;</a>
+			  <a class="next">&#10095;</a>
+			</div>
+
+			<div class="slide">
+				<img src="images/slenyje_1.jpg" alt="giluzis_lake" class="galery"> 
+				<article class="tekstas">
+					<h2 >Netoliese - <span class="bold">Gilužio ežeras</span></h2>
+					<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mi odio, sodales sed sollicitudin efficitur, fermentum non augue. Duis volutpat libero non leo porta, id tincidunt ligula consectetur. Aenean nec posuere nibh, ut finibus ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+					<br>
+					<button class="listen"><i class="fas fa-music"></i>   Klausyti</button>
+				</article>
+			</div>
+		</section>
+
+		<section class="section location">
+			<h2 class="page_name">Vieta <span class="bold">mieste</span></h2>
+			<div class="location_content">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d9287.600616554391!2d25.154487497694312!3d54.70617875223605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1slt!2slt!4v1538073807271" frameborder="0"  allowfullscreen class="map"></iframe>
+				<section class="benefits">
+					<nav class="btn_group">
+						<button class="location_choice"><img src="images/icons/cart.png" alt="cart" class="button_image"></button>
+						<button class="location_choice"><img src="images/icons/book.png" alt="book" class="button_image"> </button>
+						<button class="location_choice active"><img src="images/icons/plus.png" alt="hospital" class="button_image"> </button>
+						<button class="location_choice"><img src="images/icons/child.png" alt="child" class="button_image"> </button>
+						<button class="location_choice"><img src="images/icons/gym.png" alt="gym" class="button_image"></button>
+						<button class="location_choice"><img src="images/icons/bank.png" alt="bank" class="button_image"></button>
+						<button class="location_choice"><img src="images/icons/arrows.png" alt="arrows" class="button_image"></button>
+					</nav>
+		
+					<table class="pharmacy">
+						<caption>Vaistinės ir gydymo įstaigos</caption>
+						<tr>
+							<td>Poliklinika</td>
+							<td class="distance">900</td>
+						</tr>
+						<tr>
+							<td>Vaistinė "Pilanta"</td>
+							<td class="distance">600</td>
+						</tr>
+						<tr>
+							<td>Šeimos sveikatos namai "Gyda"</td>
+							<td class="distance">750</td>
+						</tr>
+						<tr>
+							<td>Marijos vaistinė</td>
+							<td class="distance">1200</td>
+						</tr>
+						<tr>
+							<td>Eurovaistinė (prekybos centre "Pupa")</td>
+							<td class="distance">800</td>
+						</tr>
+						<tr>
+							<td class="btm_elem">B. Kiselienės sveikatingumo studija</td>
+							<td class="distance">1200</td>
+						</tr>
+					</table>
+
+				</section>
+			</div>	
+			
+		</section>
+
+		<section class="section presentation">
+			<div class="partners">
+				<img src="images/phi.png" class="partner_logo" alt="partner logo">
+				<img src="images/npna.png" class="partner_logo" alt="partner logo">
+				<img src="images/lntpa.png" class="partner_logo" alt="partner logo">				
+			</div>
+			<section class="citus_description">
+				<img src="images/citus.png" alt="citus logo" >
+				<h2 class="name_citus"> nekilnojamojo turto vystytojas</h2>
+				<p>Bendradarbiaujame su Lietuvos nekilnojamojo turto plėtros asociacija.<br>Nacionaline pasyvaus namo asociacija, <br>Kultūros paveldo departamentu ir Certified Passive House institute Vokietijoje.</p>
+				<span class="dot"></span>
+				<span class="dot"></span>
+				<span class="dot"></span>
+				<span class="dot active"></span>
+			</section>			
+		</section>
+
+		<section class="section background">
+			
+			<div class="contact_content">	
+				<div class="grouped_employees">
+					<h2 class="page_name spec"><span class="bold">Kontaktai</span></h2>
+					<section class="employees">
+						<div class="one_emp">
+							<img src="images/laura.png" alt="employee_laura">
+							<p class="name">Laura Zvaliauskaite</p>
+							<p class="position">Pardavimų vadybininkė</p>
+							<div class="emp_contact">
+								<p><i class="fas fa-envelope"> </i>laura@cc.lt</p>
+								<p><i class="fas fa-phone"></i>+370 655 56408</p>
+							</div>
+						</div>
+						<div class="one_emp">
+							<img src="images/monika.png" alt="employee_monika">
+							<p class="name">Monika Kuzminskaite</p>
+							<p class="position">Pardavimų vadybininkė</p>
+							<div class="emp_contact">
+								<p><i class="fas fa-envelope"> </i>monika@cc.lt</p>
+								<p><i class="fas fa-phone"></i>+370 655 56408</p>
+							</div>
+						</div>
+					</section>
+				</div>
+		
+				<form name="RegForm" onsubmit="return validation()" method="post"> 
+					<div class="form_data">
+					<h3 class="form_name"><span class="bold">Laiko</span> rezervacija susitikimui</h3>
+						<input type="email" name="EMail" placeholder="El. pastas">
+						<input type="text" name="Phone" placeholder="Telefonas" >
+						<input type="text" name="appointment_time" placeholder="Rezervuoju laika susitikimui x d. x val." >
+						<input type="submit" value="siusti">
+					</div>
+				</form>					
+			</div>
+		</section>
+
+		 <footer>
+		 	<div class="footer_elements">
+			 	<img src="images/citus_grey.png" alt="grey logo">
+			 	<p class="copyright">&#9400; 2016, Visos teisės saugomos | e-solution: <a href="http://www.gaumina.lt/index.html" class="company"> Gaumina</a>.</p>
+		 	</div>
+		</footer> 
+</body>
+</html>
