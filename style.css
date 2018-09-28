@@ -192,7 +192,8 @@ span.bold {
 .map{
 	width: 60%;
 	height:100%;
-	float: right; 
+	float: right;
+	frameborder: 0; 
 	border: 0; 
 }
 .presentation{
