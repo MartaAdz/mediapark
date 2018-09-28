@@ -13,26 +13,33 @@
 		function validation(){
 
 			var email = document.forms["RegForm"]["EMail"];
-			var phone = document.forms["RegForm"]["Phone"];
-			var app =  document.forms["RegForm"]["appointment_time"];  
 			if (email.value == "" || email.value.indexOf("@", 0) < 0||email.value.indexOf(".", 0) < 0 )								 
 			{ 
-				window.alert("Please enter a valid e-mail address."); 
+				window.alert("Please enter a valid e-mail address"); 
 				email.focus(); 
 				return false; 
 			} 
-			if (phone.value == "")                           
-		    { 
-		        window.alert("Please enter your telephone number."); 
-		        phone.focus(); 
-		        return false; 
-		    } 
-		    if (app.value == "" || app.value.indexOf(" ", 0) < 0)								 
+
+
+
+			var phoneNumber = document.forms["RegForm"]["Phone"].value;
+			var phoneRGEX = /^[(]{0,1}[0-9]{9}$/;
+  			var phoneResult = phoneRGEX.test(phoneNumber);
+  			if(phoneResult == false)
+				{
+				alert('Please enter a valid phone number');
+				return false;
+				}
+
+
+			var app =  document.forms["RegForm"]["appointment_time"];    
+			if (app.value == "" || app.value.indexOf(" ", 0) < 0)								 
 			{ 
-				window.alert("Please enter a valid e-mail address.");
+				window.alert("Please enter a valid appointment time");
 				app.focus(); 
 				return false; 
 			} 
+		
 
 		return true; }
 	</script> 
