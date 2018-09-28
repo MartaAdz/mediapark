@@ -1,13 +1,16 @@
 body {  
 	margin: 0; 
+	max-width: 100%;
 	font-family: 'Open Sans', sans-serif;
+}
+* {
+  box-sizing: border-box;
 }
 .header_elements, .footer_elements {
 	width: 85%;
 	margin: auto;
 
 }
-
 header a {
 	float: left;
 	color: #f4f4ec;
@@ -30,14 +33,13 @@ float: right;
 }
 .section {
 	overflow: hidden;
-	height: 100vh;
+	height: 750px;
 	margin: auto;
 }
 .background {
 	position: relative;
 	background-color: #f7f3ec;
 }
-
 h2 {
 
 	text-transform: uppercase;
@@ -74,15 +76,15 @@ span.bold {
 }
 .slide {
 	background-color: #584b3b;
-	margin-left: 10%;
 	height: 65%;
+	max-width: 90%;
+	float: right;
 	-moz-box-shadow: inset -5px -5px 50px 5px rgba(0, 0, 0, 0.5);
 	-webkit-box-shadow: inset -5px -5px 50px 5px rgba(0, 0, 0, 0.5);
 	box-shadow: inset -5px -5px 50px 5px rgba(0, 0, 0, 0.5);
 }
 .galery {
-
-	height: 100%;
+	max-width: 33%;
 	margin-left: 80px;
 	margin-top: 50px; 
 	float: left;
@@ -92,12 +94,11 @@ span.bold {
 }
 .tekstas {
 	float: left;
-	width: 40%;
-	height: inherit;
-	color: #f4f4ec;
-	padding: 120px 70px;	
+	max-width: 33%;
+	height: 100%;	
 	color: #f4f4ec;	
 	font-size: 12px;
+	margin: 120px 7%;
 }
 .description {
 	line-height: 20px;
@@ -122,31 +123,24 @@ span.bold {
 	height: 65%;
 	background: pink; 
 }
-
 .location_choice {
 	margin: 0;
 	float: left;
 	width: 14.28%;
 	padding-top: 14.28%;
 	background: #584b3b;
-	border-top: none;
-	border-bottom: none;
-	border-left:none;
-	border-right: 1px solid white;
+	border:none;
 	position: relative;
-
+	border-left: 1px solid #ece2d1;
 }
 .button_image {
 	position: absolute;
-	top: 20px;
-    left: 20px;
-    bottom: 0;
-    right: 0;
+	top: 33%;
+    left: 33%;
 }
 .location_choice.active, .location_choice:hover{
 	background: #9eb46a;
 }
-
 .pharmacy {  
 	display: block;
 	float: left;
@@ -296,12 +290,13 @@ input[type=submit] {
 .grouped_employees{
 	width: 40%;
 	margin-top: 50px;
-	margin-left: 95px;	
+	margin-left: 10%;	
 	display: inline-block;
 	height: inherit;
 	float: left;
 }
 .one_emp{
+	max-width: 50%;
 	display: inline-block;
 	float: left;
 	padding: 20px 50px 0 0; 
@@ -337,7 +332,8 @@ header, footer {
 	overflow: hidden;
 	background-color: #584b3b; 
 	padding: 15px 15px;
-	height: 30px;
+	height: 70px;
+
 }
 footer {
 	font-size: 11px;
@@ -354,3 +350,5 @@ footer img {
 	text-decoration: none;
 	color: white;
 }
+
+//tarp mygtuku idet skirtukus
