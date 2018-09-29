@@ -73,18 +73,19 @@ span.bold {
 .prev:hover, .next:hover {
   background-color: #c4bfb8;
 }
+.slide:not(:first-child){
+    display: none;
+}
 .slide {
 	background-color: #584b3b;
-	height: 65%;
+	height: 490px;
 	max-width: 90%;
 	float: right;
 	-moz-box-shadow: inset -5px -5px 50px 5px rgba(0, 0, 0, 0.5);
 	-webkit-box-shadow: inset -5px -5px 50px 5px rgba(0, 0, 0, 0.5);
 	box-shadow: inset -5px -5px 50px 5px rgba(0, 0, 0, 0.5);
 }
-.slide:not(:first-child){
-    display: none;
-}
+
 .galery {
 	max-width: 33%;
 	margin-left: 80px;
@@ -126,7 +127,7 @@ span.bold {
 	height: 65%;
 	background: pink; 
 }
-.location_choice {
+.tab {
 	margin: 0;
 	float: left;
 	width: 14.28%;
@@ -136,16 +137,20 @@ span.bold {
 	position: relative;
 	border-left: 1px solid #ece2d1;
 }
-.button_image {
+.tab .active {
+	display: block;
+}
+.tab_image {
 	position: absolute;
 	top: 33%;
     left: 33%;
 }
-.location_choice.active, .location_choice:hover{
+.tab_navigation button.active, .tab_navigation button:hover{
 	background: #9eb46a;
 }
-.pharmacy {  
-	display: block;
+
+.tabcontent {  
+	display: none;
 	float: left;
 	width: 100%;
 	color: #584b3b;
@@ -154,12 +159,12 @@ span.bold {
 	font-size: 10px;
 }
 
-.pharmacy td {
+.tabcontent td {
 	width: 100%;
 	padding: 15px 0;
 }
 
-.pharmacy tr {
+.tabcontent tr {
 	border-bottom: 1px solid #584b3b;
 	border-collapse: collapse;
 }
@@ -168,7 +173,7 @@ span.bold {
 	font-weight: bold;
 	text-align: right;
 }
-.pharmacy caption {
+.tabcontent caption {
 	padding-bottom: 10px;
 	font-weight: bold;
 	text-transform: uppercase;
@@ -193,13 +198,14 @@ span.bold {
 	frameborder: 0; 
 	border: 0; 
 }
+
+
 .presentation{
 	background-image: url("images/bg.png");
 	background-size: cover;
 	background-position: center;
 	position: relative;
 }
-
 .partner_logo{
 	float: right; 
 	height: 40px;
