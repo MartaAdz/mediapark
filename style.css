@@ -70,7 +70,6 @@ span.bold {
 	left: 75px;
 	top: 140px;
 }
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
   background-color: #c4bfb8;
 }
@@ -82,6 +81,9 @@ span.bold {
 	-moz-box-shadow: inset -5px -5px 50px 5px rgba(0, 0, 0, 0.5);
 	-webkit-box-shadow: inset -5px -5px 50px 5px rgba(0, 0, 0, 0.5);
 	box-shadow: inset -5px -5px 50px 5px rgba(0, 0, 0, 0.5);
+}
+.slide:not(:first-child){
+    display: none;
 }
 .galery {
 	max-width: 33%;
@@ -98,7 +100,8 @@ span.bold {
 	height: 100%;	
 	color: #f4f4ec;	
 	font-size: 12px;
-	margin: 120px 7%;
+	margin: 10% 7%;
+	
 }
 .description {
 	line-height: 20px;
@@ -270,11 +273,374 @@ input  {
 	background-color: transparent;
 }
 input[type=submit] {
-	width: 30%;
+	max-width: 30%;
 	background-color: #9eb46a;
     border: none;
     color: #f4f4ec;
-    padding: 10px 20px 10px 20px;
+    padding: 10px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    display: inline-block;
+    border-radius: 4px;
+    -moz-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+
+}
+ .spec {
+ 	margin: 10px 0;
+ }
+.grouped_employees{
+	width: 40%;
+	margin-top: 50px;
+	margin-left: 10%;	
+	display: inline-block;
+	height: inherit;
+	float: left;
+}
+.one_emp{
+	max-width: 50%;
+	display: inline-block;
+	float: left;
+	padding: 20px 50px 0 0; 
+	color: #584b3b;
+}
+.one_emp img {
+	width: 90%;
+	margin-bottom: 20px;
+	-moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); 
+}
+.name {
+	font-size: 13px; 
+	font-weight: bold;
+	padding: 0;
+}
+.position {
+	font-size: 11px; 
+}
+.emp_contact {
+	font-size: 12px;
+	padding-top: 10px;
+}
+.emp_contact p, .name, .position{
+	margin: 5px 0;
+}
+.emp_contact .fas {
+	padding-right: 15px; 
+}
+header, footer {
+	display: block; 
+	overflow: hidden;
+	background-color: #584b3b; 
+	padding: 15px 15px;
+	height: 70px;
+
+}
+footer {
+	font-size: 11px;
+	background-color: #302d28; 
+}
+footer img {
+	height: 30px;
+}
+.copyright{
+	float: right;
+	color: grey;
+}
+.company{
+	text-decoration: none;
+	color: white;
+}
+@media only screen and (min-width: 600px) {
+
+
+	
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+/*.header_elements, .footer_elements {
+	width: 85%;
+	margin: auto;
+
+}
+header a {
+	float: left;
+	color: #f4f4ec;
+	text-align: center;
+	padding: 10px;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 10px;
+}
+header a.active {
+	font-weight: bold;
+}
+header a.logo {
+
+	font-size: 20px;
+	font-weight: bold;
+}
+.header-choice {
+float: right;
+}*/
+
+h2 {
+
+	font-size: 20px;
+}
+
+.page_name {
+	width: 85%;
+	margin: 50px 95px;
+ 	color: #584b3b;
+}
+.prev, .next {
+	float: left;
+	cursor: pointer;
+	width: auto;
+	padding: 7px 12px;
+	color: #584b3b;
+	background: #fff;
+	transition: 0.6s ease;
+	border-radius: 4px;
+	margin:2px;
+}
+.slide_button {
+	position: absolute;
+	left: 75px;
+	top: 140px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: #c4bfb8;
+}
+.mySlides {
+	background-color: #584b3b;
+	height: 65%;
+	max-width: 90%;
+	float: right;
+	-moz-box-shadow: inset -5px -5px 50px 5px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: inset -5px -5px 50px 5px rgba(0, 0, 0, 0.5);
+	box-shadow: inset -5px -5px 50px 5px rgba(0, 0, 0, 0.5);
+}
+.galery {
+	max-width: 33%;
+	margin-left: 80px;
+	margin-top: 50px; 
+	float: left;
+	-moz-box-shadow:  5px 5px 20px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow:  5px 5px 20px rgba(0, 0, 0, 0.5);
+	box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+}
+.tekstas {
+	float: left;
+	max-width: 33%;
+	height: 100%;	
+	color: #f4f4ec;	
+	font-size: 12px;
+	margin: 10% 7%;
+	
+}
+.description {
+	line-height: 20px;
+}
+.listen {
+    background-color: #584b3b;
+    border: 1px solid #f4f4ec;
+    color: #f4f4ec;
+    font-size: 12px;
+    padding: 10px 30px 10px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    display: inline-block;
+    border-radius: 4px;
+}
+.location {
+	background: #ece2d1;
+}
+.location_content{
+	margin: auto;
+	width: 85%;
+	height: 65%;
+	background: pink; 
+}
+.location_choice {
+	margin: 0;
+	float: left;
+	width: 14.28%;
+	padding-top: 14.28%;
+	background: #584b3b;
+	border:none;
+	position: relative;
+	border-left: 1px solid #ece2d1;
+}
+.button_image {
+	position: absolute;
+	top: 33%;
+    left: 33%;
+}
+.location_choice.active, .location_choice:hover{
+	background: #9eb46a;
+}
+.pharmacy {  
+	display: block;
+	float: left;
+	width: 100%;
+	color: #584b3b;
+	border-collapse: collapse;
+	padding: 20px 80px;
+	font-size: 10px;
+}
+
+.pharmacy td {
+	width: 100%;
+	padding: 15px 0;
+}
+
+.pharmacy tr {
+	border-bottom: 1px solid #584b3b;
+	border-collapse: collapse;
+}
+
+.distance {
+	font-weight: bold;
+	text-align: right;
+}
+.pharmacy caption {
+	padding-bottom: 10px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: left;
+	font-size: 14px;
+}
+.benefits {
+	display: inline-block;
+	margin: auto 0;
+	height: 100%;
+	float: left;
+	width: 40%;
+	background:#f4f4ec; 
+	-moz-box-shadow: 10px 0 5px -5px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 10px 0 5px -5px rgba(0, 0, 0, 0.5);
+	box-shadow: 10px 0 5px -5px rgba(0, 0, 0, 0.5);
+}
+.map{
+	width: 60%;
+	height:100%;
+	float: right;
+	frameborder: 0; 
+	border: 0; 
+}
+.presentation{
+	background-image: url("images/bg.png");
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+
+.partner_logo{
+	float: right; 
+	height: 40px;
+	margin: 20px 15px;
+}
+.citus_description{
+	text-align: center;
+	color: #f4f4ec;
+	margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.dots{
+	text-align:center;
+}
+
+.dot {
+  	cursor: pointer;
+  	height: 10px;
+ 	width: 10px;
+  	margin: 0 2px;
+ 	background-color: transparent;
+ 	border-radius: 50%;
+	border: 1px solid #d5b20f;
+ 	display: inline-block;
+  	transition: background-color 0.6s ease;
+}
+
+.dot.active {
+	border: 3px solid #d5b20f; 
+}
+.contact_content{
+	background: #ece2d1;
+	height: 70%;
+	margin-right: 10%;
+	margin-top: 60px;
+}
+form { 
+	width: 40%;
+	margin-top: 50px;
+	margin-right: 70px;	
+	display: inline-block;
+	height: 100%;
+	float: right;
+	background-image: url("images/contact-form.png");
+	-moz-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+	box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+}
+.form_data{
+	width: 60%;
+	margin: auto;
+	padding-top: 50px;
+}
+
+.form_name {
+	text-transform: uppercase;
+	color: #f4f4ec;
+	font-size: 17px;
+}
+input  {
+	width: 100%;
+	margin: 20px 0;
+	padding: 10px 0;
+	color: #f4f4ec;
+	border: none;
+	border-bottom: 1px solid #f4f4ec;
+	background-color: transparent;
+}
+input[type=submit] {
+	max-width: 30%;
+	background-color: #9eb46a;
+    border: none;
+    color: #f4f4ec;
+    padding: 10px 20px;
     text-align: center;
     text-transform: uppercase;
     display: inline-block;
@@ -351,4 +717,6 @@ footer img {
 	color: white;
 }
 
+
+} 
 //tarp mygtuku idet skirtukus
