@@ -9,88 +9,12 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet"> 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-	<script> 
-
-	/*SLIDESHOW */
-		var slideIndex = 1;
-		showSlides(slideIndex);
-
-		// Next/previous controls
-		function plusSlides(n) {
-			showSlides(slideIndex += n);
-		}
-
-		function showSlides(n) {
-  			var i;
-			var slides = document.getElementsByClassName("slide");
-			if (n > slides.length) {slideIndex = 1}
-			if (n < 1) {slideIndex = slides.length}
-			for (i = 0; i < slides.length; i++) {
-			    slides[i].style.display = "none";
-			}
-			slides[slideIndex-1].style.display = "block";
-		} 
-
-
-	/*TAB NAVIGATION*/
-		window.onload = function () {
-            startTab();
-        };
-
-        function startTab() {
-            document.getElementById("defaultOpen").click()
-        }
-
-		function openBenefit(evt, tabName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("tab");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-            document.getElementById(tabName).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
-
-	/*FORM VALIDATION*/
-		function validation(){
-
-		var email = document.forms["RegForm"]["EMail"];
-		if (email.value == "" || email.value.indexOf("@", 0) < 0||email.value.indexOf(".", 0) < 0 )								 
-		{ 
-			window.alert("Please enter a valid e-mail address"); 
-			email.focus(); 
-			return false; 
-		} 
-
-		var phoneNumber = document.forms["RegForm"]["Phone"].value;
-		var phoneRGEX = /^[(]{0,1}[0-9]{9}$/;
-  		var phoneResult = phoneRGEX.test(phoneNumber);
-  		if(phoneResult == false)
-		{
-			alert('Please enter a valid phone number');
-			return false;
-		}
-
-		var app =  document.forms["RegForm"]["appointment_time"];    
-		if (app.value == "" || app.value.indexOf(" ", 0) < 0)		
-		{ 
-			window.alert("Please enter a valid appointment time");
-			app.focus(); 
-			return false; 
-		} 
-		
-
-		return true; }
-	</script> 
+	<script type="text/javascript" src="action.js"></script> 
 
 </head>
 <body>
 	<header>
-		<div class="header_elements">
+		<nav class="header_elements">
 			<a class="logo">LOGO</a>
 			<div class="header-choice">
 				<a href="#">Kotedzai</a>
@@ -99,8 +23,9 @@
 				<a href="#">Gyventojams</a>
 				<a href="#">Naujienos</a>
 				<a href="#">Kontaktai</a>
+				
 			</div>
-		</div>
+		</nav>
 	</header>
 
 	<section class="section background">
@@ -115,7 +40,7 @@
 		<div class="slideshow_container">
 			<div class="slide">
 				<img src="images/slenyje_1.jpg" alt="giluzis_lake" class="galery"> 
-				<article class="tekstas">
+				<article class="slide_text">
 					<h2 >Netoliese - <span class="bold">Gilužio ežeras</span></h2>
 					<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mi odio, sodales sed sollicitudin efficitur, fermentum non augue. Duis volutpat libero non leo porta, id tincidunt ligula consectetur. Aenean nec posuere nibh, ut finibus ligula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
 					<br>
@@ -124,11 +49,9 @@
 			</div>
 			<div class="slide">
 				<img src="images/slenyje_1.jpg" alt="giluzis_lake" class="galery"> 
-				<article class="tekstas">
+				<article class="slide_text">
 					<h2><span class="bold">Antroji </span>skaidre</h2>
 					<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mi odio, sodales sed sollicitudin efficitur, fermentum non augue.Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
-					<br>
-					<button class="listen"><i class="fas fa-music"></i>   Klausyti</button>
 				</article>
 			</div>
 		</div>
@@ -137,14 +60,7 @@
 	<section class="section location">
 		<h2 class="page_name">Vieta <span class="bold">mieste</span></h2>
 		<div class="location_content">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d9287.600616554391!2d25.154487497694312!3d54.70617875223605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1slt!2slt!4v1538073807271" allowfullscreen class="map"></iframe>
-				<span class="markup "></span>
-				<span class="markup "></span>
-				<span class="markup "></span>
-				<span class="markup "></span>
-				<span class="markup "></span>
-				<span class="markup "></span>
-				<span class="markup "></span>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d9287.600616554391!2d25.154487497694312!3d54.70617875223605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1slt!2slt!4v1538073807271" allowfullscreen class="map"></iframe>
 			<section class="benefits">
 				<nav class="tab_navigation">
 
@@ -152,7 +68,7 @@
 
 					<button class="tab" onclick="openBenefit(event, 'reading')"><img src="images/icons/book.png" alt="book logo" class="tab_image"> </button>
 
-					<button class="tab" onclick="openBenefit(event, 'pharmacy')"  id="defaultOpen"><img src="images/icons/plus.png" alt="hospital logo" class="tab_image"> </button>
+					<button id="defaultOpen" class="tab" onclick="openBenefit(event, 'pharmacy')" ><img src="images/icons/plus.png" alt="hospital logo" class="tab_image"> </button>
 
 					<button class="tab" onclick="openBenefit(event, 'school')"><img src="images/icons/child.png" alt="child logo" class="tab_image"> </button>
 
@@ -183,7 +99,7 @@
 					</tr>
 				</table>
 
-				<table id="pharmacy" class="tabcontent">
+				<table id="pharmacy defaultOpen" class="tabcontent">
 					<caption>Vaistinės ir gydymo įstaigos</caption>
 					<tr>
 						<td>Poliklinika</td>
@@ -292,7 +208,7 @@
 		</section>			
 	</section>
 
-	<section class="section background">
+	<section class="section background contact">
 			
 		<div class="contact_content">	
 			<div class="grouped_employees">
